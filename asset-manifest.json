@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/budget-calculator/static/css/main.afd3fa09.chunk.css",
+    "main.js": "/budget-calculator/static/js/main.aa338ac4.chunk.js",
+    "main.js.map": "/budget-calculator/static/js/main.aa338ac4.chunk.js.map",
+    "runtime-main.js": "/budget-calculator/static/js/runtime-main.c986d838.js",
+    "runtime-main.js.map": "/budget-calculator/static/js/runtime-main.c986d838.js.map",
+    "static/js/2.85dceec5.chunk.js": "/budget-calculator/static/js/2.85dceec5.chunk.js",
+    "static/js/2.85dceec5.chunk.js.map": "/budget-calculator/static/js/2.85dceec5.chunk.js.map",
+    "index.html": "/budget-calculator/index.html",
+    "precache-manifest.b14e766f8600a12ada715f0f11fd719e.js": "/budget-calculator/precache-manifest.b14e766f8600a12ada715f0f11fd719e.js",
+    "service-worker.js": "/budget-calculator/service-worker.js",
+    "static/css/main.afd3fa09.chunk.css.map": "/budget-calculator/static/css/main.afd3fa09.chunk.css.map",
+    "static/js/2.85dceec5.chunk.js.LICENSE.txt": "/budget-calculator/static/js/2.85dceec5.chunk.js.LICENSE.txt",
+    "static/media/calculator.svg": "/budget-calculator/static/media/calculator.d0eb6fd9.svg",
+    "static/media/delete.svg": "/budget-calculator/static/media/delete.45844116.svg",
+    "static/media/edit.svg": "/budget-calculator/static/media/edit.b26a118c.svg",
+    "static/media/login.svg": "/budget-calculator/static/media/login.80f37359.svg",
+    "static/media/password.svg": "/budget-calculator/static/media/password.b810fd50.svg",
+    "static/media/refresh.svg": "/budget-calculator/static/media/refresh.4d49b1ee.svg",
+    "static/media/registration.svg": "/budget-calculator/static/media/registration.2d9cb434.svg",
+    "static/media/save.svg": "/budget-calculator/static/media/save.d82c8949.svg",
+    "static/media/settings.svg": "/budget-calculator/static/media/settings.4b4752d6.svg",
+    "static/media/username.svg": "/budget-calculator/static/media/username.b6fc0f15.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c986d838.js",
+    "static/js/2.85dceec5.chunk.js",
+    "static/css/main.afd3fa09.chunk.css",
+    "static/js/main.aa338ac4.chunk.js"
+  ]
+}

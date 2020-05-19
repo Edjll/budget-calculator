@@ -28,7 +28,7 @@ class Item extends Component {
     }
 
     deletingItem() {
-        this.deletingItem();
+        this.deleteItem();
         setTimeout(() => this.props.deleteItem(this.props.id), 400);
     }
 

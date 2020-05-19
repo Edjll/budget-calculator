@@ -1,0 +1,22 @@
+.datapicker-display {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0px 0px 3px 0px black;
+    border-radius: 10px 0;
+    overflow: hidden;
+    width: 200px;
+}
+
+.datapicker-display input {
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    font: 400 0.9em Arial;
+}
+
+.datapicker-display input:first-of-type {
+    font-size: 1.2em;
+}

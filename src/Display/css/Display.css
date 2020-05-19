@@ -1,0 +1,33 @@
+.display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 10vh;
+}
+
+.display-dark {
+    background-color: grey;
+}
+
+.display-all-money {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.display-month-money span {
+    font: 400 1.5em Arial;
+}
+
+.display-settings-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+}

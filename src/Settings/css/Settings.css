@@ -1,0 +1,114 @@
+.settings-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100% !important;
+    background-color: #ffe1e1;
+    box-shadow: 0px 0px 5px 0px black;
+    transform: rotateY(90deg);
+    transform-origin: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s linear, box-shadow 0.5s linear;
+}
+
+.open-sign-in {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    top: 10px;
+    right: 10px;
+}
+
+.open-sign-in img {
+    width: 100%;
+    height: 100%;
+}
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-form label {
+    width: 230px;
+    background-color: white;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 3px black;
+}
+
+.settings-form label span {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 80px;
+    padding-left: 10px;
+    height: 100%;
+    background-color: #f3c6c6;
+    font: 400 1.1em Arial;
+    transition: background-color 0.5s linear;
+}
+
+.settings-form label span:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -40px;
+    border: 20px solid transparent;
+    transition: border 0.5s linear;
+}
+
+.settings-form label:nth-of-type(even) span:after {
+    border-left: 20px solid #f3c6c6;
+    border-bottom: 20px solid #f3c6c6;
+}
+
+.settings-form label:nth-of-type(odd) span:after {
+    border-left: 20px solid #f3c6c6;
+    border-top: 20px solid #f3c6c6;
+}
+
+.settings-form label select {
+    height: 100%;
+    width: 105px;
+    border: none;
+    font-size: 1em;
+    outline: none;
+    cursor: pointer;
+    font: 400 1.1em Arial;
+}
+
+.settings-form label:not(:last-of-type) {
+    margin-bottom: 15px;
+}
+
+.settings-dark {
+    background-color: #c19292;
+    box-shadow: 0px 0px 5px 0px white;
+}
+
+.settings-span-dark {
+    background-color: #ca8d8d !important;
+}
+
+.settings-form label:nth-of-type(even) .settings-span-dark:after {
+    border-left: 20px solid #ca8d8d;
+    border-bottom: 20px solid #ca8d8d;
+}
+
+.settings-form label:nth-of-type(odd) .settings-span-dark:after {
+    border-left: 20px solid #ca8d8d;
+    border-top: 20px solid #ca8d8d;
+}

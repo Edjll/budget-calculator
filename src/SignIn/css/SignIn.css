@@ -1,0 +1,152 @@
+.sign-in-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e3f5ff;
+    box-shadow: 0px 0px 5px 0px black;
+    transform: rotateX(-90deg);
+    transform-origin: top;
+    transform-style: preserve-3d;
+}
+
+.rotate-container {
+    transform: rotateZ(-90deg) rotateY(180deg);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-in-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.sign-in-form label {
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    box-shadow: 0px 0px 3px black;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.sign-in-form label input {
+    border: none;
+    background-color: transparent;
+    height: 40px;
+    width: calc(100% - 40px);
+    padding: 0 10px;
+    font-size: 1.2em;
+    outline: none;
+}
+
+.sign-in-form label img {
+    width: 40px;
+    height: 80%;
+    padding: 4px 0;
+}
+
+.sign-in-form button {
+    width: 200px;
+    height: 40px;
+    background-color: #a3d4ff;
+    border: none;
+    box-shadow: 0px 0px 3px black;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.5s linear;
+}
+
+.sign-in-form button span {
+    font-size: 1.4em;
+}
+
+.error-message {
+    min-width: 200px;
+    width: max-content;
+    padding: 0 10px;
+    box-sizing: border-box;
+    height: 40px;
+    background-color: #ff6f6f;
+    box-shadow: 0px 0px 3px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -55px;
+    animation: error-create 0.5s linear;
+}
+
+@keyframes error-create {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.error-message span {
+    color: white;
+    font-size: 1.2em;
+}
+
+.error-removing {
+    transform: scale(0);
+    transition: transform 0.5s linear;
+}
+
+.open-app, .open-registration {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+}
+
+.open-app {
+    top: 10px;
+    left: 10px;
+}
+
+.open-registration {
+    bottom: 10px;
+    left: 10px;
+    transition: transform 0.5s linear;
+}
+
+.open-app img, .open-registration img {
+    width: 100%;
+    height: 100%;
+}
+
+.settings-button-wrapper {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.rotate-button {
+    transform: rotateY(180deg);
+}
+
+.sign-in-dark {
+    background-color: #a2b9c5;
+    box-shadow: 0px 0px 5px 0px white;
+}
+
+.sign-in-button-dark {
+    background-color: #86b1d8 !important;
+}

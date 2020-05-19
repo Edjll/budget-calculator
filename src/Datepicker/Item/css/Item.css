@@ -1,0 +1,17 @@
+.datepicker-item {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+    outline: none;
+    font: 400 0.9em Arial;
+}
+
+.datepicker-item:hover {
+    background-color: #dadeff;
+}
+
+.selected {
+    color: blue;
+}

@@ -23,7 +23,6 @@
   flex-direction: column;
   padding: 1.907%;
   box-sizing: border-box;
-  box-shadow: 0px 0px 5px 0px black;
   background-color: #dfecdc;
 }
 
@@ -41,5 +40,4 @@
 
 .budget-calculator-dark {
   background-color: #aec5a9 !important;
-  box-shadow: 0px 0px 5px 0px white !important;
 }

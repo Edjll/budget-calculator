@@ -22,6 +22,18 @@ export const constants = {
         app : '',
         signIn : 'signInActive',
         settings : 'settingsActive'
+    },
+    styles : {
+        settingsActive : {
+            transform: 'rotateY(-90deg) translateZ(500px)'
+        },
+        signInActive : {
+            transform: 'rotateY(-90deg) rotateZ(90deg) translate3d(250px, 250px, 500px)'
+        },
+        boxShadows : {
+            light : 'black',
+            dark : 'white'
+        }
     }
 };
 

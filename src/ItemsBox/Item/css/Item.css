@@ -4,7 +4,6 @@
     display: flex;
 	position: relative;
 	margin: 2.39% 2.8% 0 1.73%;
-	box-shadow: 0px 0px 3px black;
 	transition: box-shadow 0.3s linear, border-radius 0.3s linear;
 	animation: creating 0.5s linear;
 	background-color: white;
@@ -12,8 +11,6 @@
 
 .item-wrapper:last-of-type {
 	margin-bottom: 5px;
-	border-bottom-left-radius: 10px !important;
-	border-bottom-right-radius: 10px !important;
 }
 
 .item-value {
@@ -34,10 +31,6 @@
 
 .item-value input:read-only {
 	cursor: default;
-}
-
-.item-editing {
-	box-shadow: 0px 0px 3px black, inset 0px 0px 10px -5px black;
 }
 
 .item-edit {

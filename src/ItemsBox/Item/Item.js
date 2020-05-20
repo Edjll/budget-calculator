@@ -51,8 +51,11 @@ class Item extends Component {
     render() {
         return (
             <div 
-                className = { `item-wrapper${this.state.editing ? ' item-editing' : '' }${ this.state.deleting ? ' item-deleting' : '' }` }
-                style = { { height : `${ this.props.height * 0.05715 }px` } }
+                className = { `item-wrapper${ this.state.deleting ? ' item-deleting' : '' }` }
+                style = { { 
+                    height : `${ this.props.height * 0.05715 }px`,
+                    boxShadow : `0 0 ${this.props.height * 0.006}px ${this.props.boxShadows.light}${this.state.editing ? `, inset 0px 0px ${this.props.height * 0.02}px -${this.props.height * 0.01}px ${this.props.boxShadows.light}` : ''}`
+                } }
             >
                 <div className = 'item-value'>
                     <input 

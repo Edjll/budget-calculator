@@ -63,6 +63,7 @@ class ItemsBox extends Component {
           deleteItem = { this.deleteItem }
           transformValue = { this.transformValue }
           height = { this.props.height }
+          boxShadows = { this.props.boxShadows }
         />
       );
     });
@@ -78,6 +79,7 @@ class ItemsBox extends Component {
             transformValue = { this.transformValue }
             checkValue = { this.checkValue }
             height = { this.props.height }
+            boxShadows = { this.props.boxShadows }
         />
         <div className = 'items'>
             { items }

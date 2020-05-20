@@ -29,17 +29,7 @@ class App extends Component {
       expence = user.budget.expences.years[user.date.year].months[user.date.month].money;
     }
 
-    this.styles = {
-      width : {
-        width : '500px'
-      },
-      settingsActive : {
-        transform: 'rotateY(-90deg) translateZ(500px)'
-      },
-      signInActive : {
-        transform: 'rotateY(-90deg) rotateZ(90deg) translate3d(250px, 250px, 500px)'
-      }
-    }
+    this.styles = constants.styles;
 
     this.state = {
       money : {
@@ -287,7 +277,6 @@ class App extends Component {
     const state = this.state;
     state.height = document.getElementById('budget-calculator').clientHeight;
 
-    this.styles.width = { width : `${ state.height }px` };
     this.styles.settingsActive = { transform : `rotateY(-90deg) translateZ(${ state.height }px)` };
     this.styles.signInActive = { transform : `rotateY(-90deg) rotateZ(90deg) translate3d(${ state.height / 2 }px, ${ state.height / 2 }px, ${ state.height }px)` };
 
@@ -297,9 +286,18 @@ class App extends Component {
   render () {
 
     return (
-        <div id = 'budget-calculator' style = { this.styles.width } >
+        <div 
+          id = 'budget-calculator' 
+          style = { { 
+            width : this.state.height, 
+            perspective : this.state.height * 2 
+          } } 
+        >
           <div className = 'container-3d' style = { this.styles[this.state.settings.active] }>
-            <div className = { `container${ ` budget-calculator-${ this.state.settings.theme }` }` }>
+            <div 
+              className = { `container${ ` budget-calculator-${ this.state.settings.theme }` }` }
+              style = { { boxShadow : `0 0 ${this.state.height * 0.01}px ${this.styles.boxShadows[this.state.settings.theme]}` } }
+            >
               <Display
                 money = { {
                   title : storage[this.state.settings.language].budget.money,
@@ -319,6 +317,7 @@ class App extends Component {
                   months = { storage[this.state.settings.language].months }
                   changeDate = { this.changeDate.bind(this) }
                   height = { this.state.height }
+                  boxShadows = { this.styles.boxShadows }
                 />
               </div>
               <div className = 'items-boxes'>
@@ -330,6 +329,7 @@ class App extends Component {
                   deleteItem = { this.deleteItem.bind(this) }
                   changeItemValue = { this.changeItemValue.bind(this) }
                   height = { this.state.height }
+                  boxShadows = { this.styles.boxShadows }
                 />
                 <ItemsBox
                   description = { constants.budget.expences }
@@ -339,6 +339,7 @@ class App extends Component {
                   deleteItem = { this.deleteItem.bind(this) }
                   changeItemValue = { this.changeItemValue.bind(this) }
                   height = { this.state.height }
+                  boxShadows = { this.styles.boxShadows }
                 />
               </div>
             </div>
@@ -358,6 +359,7 @@ class App extends Component {
                 app : storage[this.state.settings.language].app
               } }
               height = { this.state.height }
+              boxShadows = { this.styles.boxShadows }
             />
             <SignIn 
               openSettings = { this.openSettings.bind(this) }
@@ -372,6 +374,7 @@ class App extends Component {
               } }
               theme = { this.state.settings.theme }
               height = { this.state.height }
+              boxShadows = { this.styles.boxShadows }
             />
           </div>
         </div>

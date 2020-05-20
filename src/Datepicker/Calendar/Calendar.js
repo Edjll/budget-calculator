@@ -36,6 +36,7 @@ class Calendar extends Component {
             <div 
                 className = 'datepicker-calendar' 
                 tabIndex = '0'
+                style = { { boxShadow : `0 0 ${this.props.height * 0.01}px ${this.props.boxShadows.light}` } }
             >
                 <div className = 'datepicker-switcher'>
                     <button

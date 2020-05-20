@@ -152,7 +152,7 @@ class SignIn extends Component {
                                 </div> 
                             : null 
                         }
-                        <label>
+                        <label style = { { boxShadow : `0 0 ${this.props.height * 0.01}px ${this.props.boxShadows.light}` } }>
                             <input
                                 placeholder = { this.props.storage.signIn.username }
                                 type = 'text'
@@ -163,7 +163,7 @@ class SignIn extends Component {
                             />
                             <img src = { usernameImage } alt = 'username' />
                         </label>
-                        <label>
+                        <label style = { { boxShadow : `0 0 ${this.props.height * 0.01}px ${this.props.boxShadows.light}` } }>
                             <input 
                                 placeholder = { this.props.storage.signIn.password }
                                 type = 'password'
@@ -177,9 +177,11 @@ class SignIn extends Component {
                         <button
                             className = { `${this.state.active.button.rotate ? 'rotate-button' : ''} sign-in-button-${this.props.theme }`}
                             onClick = { e => this.checkForm() }
-                            style = { { fontSize : this.props.height * 0.04 } }
+                            style = { { boxShadow : `0 0 ${this.props.height * 0.01}px ${this.props.boxShadows.light}` } }
                         >
-                            <span>{ this.state.active.page === 'login' ? this.props.storage.signIn.login : this.props.storage.signIn.registration }</span>
+                            <span style = { { fontSize : this.props.height * 0.04 } }>
+                                { this.state.active.page === 'login' ? this.props.storage.signIn.login : this.props.storage.signIn.registration }
+                            </span>
                         </button>
                     </form>
                 </div>

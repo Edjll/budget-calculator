@@ -23,27 +23,3 @@ p {
 .items::-webkit-scrollbar-thumb {
     background: rgb(82, 153, 94);
 }
-
-.items-box:nth-of-type(odd) .item-creator-wrapper {
-    border-radius: 10px 10px 0 10px;
-}
-
-.items-box:nth-of-type(even) .item-creator-wrapper {
-    border-radius: 10px 10px 10px 0;
-}
-
-.items-box:nth-of-type(odd) .items .item-wrapper:nth-of-type(odd) {
-	border-radius: 10px 0;
-}
-
-.items-box:nth-of-type(odd) .items .item-wrapper:nth-of-type(even) {
-	border-radius: 0 10px;
-}
-
-.items-box:nth-of-type(even) .items .item-wrapper:nth-of-type(odd) {
-	border-radius: 0 10px;
-}
-
-.items-box:nth-of-type(even) .items .item-wrapper:nth-of-type(even) {
-	border-radius: 10px 0;
-}

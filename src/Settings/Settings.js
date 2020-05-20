@@ -46,7 +46,7 @@ class Settings extends Component {
                     title = { this.props.storage.app }
                 />
                 <form className = 'settings-form' onSubmit = { e => e.preventDefault() }>
-                    <label>
+                    <label style = { { boxShadow : `0 0 ${this.props.height * 0.01}px ${this.props.boxShadows.light}` } }>
                         <div className = { `form-description-wrapper form-description-wrapper-${ this.props.theme }` }>
                             <span style = { { fontSize : this.props.height * 0.034 } }>
                                 { this.props.storage.settings.theme }
@@ -64,7 +64,7 @@ class Settings extends Component {
                             { themes }
                         </select>
                     </label>
-                    <label>
+                    <label style = { { boxShadow : `0 0 ${this.props.height * 0.01}px ${this.props.boxShadows.light}` } }>
                     <div className = { `form-description-wrapper form-description-wrapper-${ this.props.theme }` }>
                             <span style = { { fontSize : this.props.height * 0.034 } }>
                                 { this.props.storage.settings.language }

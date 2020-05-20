@@ -5,7 +5,6 @@
     top: 0;
     right: -100% !important;
     background-color: #ffe1e1;
-    box-shadow: 0px 0px 5px 0px black;
     transform: rotateY(90deg);
     transform-origin: left;
     display: flex;
@@ -47,7 +46,6 @@
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-    box-shadow: 0px 0px 3px black;
 }
 
 .form-description-wrapper {
@@ -101,7 +99,6 @@
 
 .settings-dark {
     background-color: #c19292;
-    box-shadow: 0px 0px 5px 0px white;
 }
 
 .form-description-wrapper-dark {

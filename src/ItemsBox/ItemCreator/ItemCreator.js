@@ -6,7 +6,10 @@ class ItemCreator extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { value : '' };
+        this.state = { 
+            value : '',
+            focus : false
+        };
     }
 
     clearInput() {
@@ -30,12 +33,23 @@ class ItemCreator extends Component {
             }
         }
     }
+    
+    changeFocus() {
+        const state = this.state;
+        state.focus = !state.focus;
+        this.setState(state);
+    }
 
     render() {
         return (
             <div 
                 className = 'item-creator-wrapper'
-                style = { { height : `${ this.props.height * 0.05715 }px` } }
+                onFocus = { e => this.changeFocus() }
+                onBlur = { e => this.changeFocus() }
+                style = { { 
+                    height : `${ this.props.height * 0.05715 }px`,
+                    boxShadow : `0 0 ${this.props.height * 0.006}px ${this.props.boxShadows.light}${this.state.focus ? `, inset 0px 0px ${this.props.height * 0.02}px -${this.props.height * 0.01}px ${this.props.boxShadows.light}` : ''}`
+                } }
             >
                 <div className = 'item-creator-value'>
                     <input

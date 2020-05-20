@@ -1,6 +1,7 @@
 #budget-calculator {
-  height: 80vh;
+  height: 60vh;
   perspective: 1000px;
+  margin: 0 10vh;
 }
 
 .container-3d {

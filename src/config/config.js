@@ -95,8 +95,8 @@ export const app = {
                 year : new Date(Date.now()).getFullYear()
             },
             settings : {
-                theme : constants.themes.light,
-                language : constants.languages.ru
+                theme : constants.themes.dark,
+                language : constants.languages.en
             }
         }
     }

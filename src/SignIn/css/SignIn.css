@@ -25,47 +25,44 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+    width: 40%;
+    height: 30%;
 }
 
 .sign-in-form label {
-    width: 200px;
-    height: 40px;
+    width: 100%;
+    height: 26.6667%;
     background-color: white;
     box-shadow: 0px 0px 3px black;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin-bottom: 7%;
 }
 
 .sign-in-form label input {
     border: none;
     background-color: transparent;
-    height: 40px;
-    width: calc(100% - 40px);
-    padding: 0 10px;
-    font-size: 1.2em;
+    height: 100%;
+    width: 80%;
+    padding: 0 5%;
     outline: none;
 }
 
 .sign-in-form label img {
-    width: 40px;
+    width: 20%;
     height: 80%;
-    padding: 4px 0;
+    padding: 2% 0;
 }
 
 .sign-in-form button {
-    width: 200px;
-    height: 40px;
+    width: 100%;
+    height: 26.6667%;
     background-color: #a3d4ff;
     border: none;
     box-shadow: 0px 0px 3px black;
     cursor: pointer;
     outline: none;
     transition: transform 0.5s linear;
-}
-
-.sign-in-form button span {
-    font-size: 1.4em;
 }
 
 .error-message {
@@ -107,8 +104,8 @@
     position: absolute;
     border: none;
     background-color: transparent;
-    width: 30px;
-    height: 30px;
+    width: 6%;
+    height: 6%;
     cursor: pointer;
     outline: none;
     padding: 0;
@@ -132,10 +129,10 @@
 
 .settings-button-wrapper {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
-    width: 30px;
-    height: 30px;
+    bottom: 2%;
+    right: 2%;
+    width: 6%;
+    height: 6%;
 }
 
 .rotate-button {

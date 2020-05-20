@@ -29,6 +29,18 @@ class App extends Component {
       expence = user.budget.expences.years[user.date.year].months[user.date.month].money;
     }
 
+    this.styles = {
+      width : {
+        width : '500px'
+      },
+      settingsActive : {
+        transform: 'rotateY(-90deg) translateZ(500px)'
+      },
+      signInActive : {
+        transform: 'rotateY(-90deg) rotateZ(90deg) translate3d(250px, 250px, 500px)'
+      }
+    }
+
     this.state = {
       money : {
         all : user.budget.incomes.money - user.budget.expences.money,
@@ -46,7 +58,8 @@ class App extends Component {
         active : constants.pages.app,
         theme : user.settings.theme,
         language : user.settings.language
-      }
+      },
+      height : 500
     }
   }
 
@@ -270,12 +283,23 @@ class App extends Component {
     });
   }
 
+  componentDidMount() {
+    const state = this.state;
+    state.height = document.getElementById('budget-calculator').clientHeight;
+
+    this.styles.width = { width : `${ state.height }px` };
+    this.styles.settingsActive = { transform : `rotateY(-90deg) translateZ(${ state.height }px)` };
+    this.styles.signInActive = { transform : `rotateY(-90deg) rotateZ(90deg) translate3d(${ state.height / 2 }px, ${ state.height / 2 }px, ${ state.height }px)` };
+
+    this.setState(state);
+  }
+
   render () {
 
     return (
-        <div className = 'app'>
-          <div className = { `container-3d${ ` app-${ this.state.settings.theme }` }${ this.state.settings.active }` }>
-            <div className = 'container'>
+        <div id = 'budget-calculator' style = { this.styles.width } >
+          <div className = 'container-3d' style = { this.styles[this.state.settings.active] }>
+            <div className = { `container${ ` budget-calculator-${ this.state.settings.theme }` }` }>
               <Display
                 money = { {
                   title : storage[this.state.settings.language].budget.money,
@@ -283,6 +307,7 @@ class App extends Component {
                  }}
                 settingsActive = { this.state.settings.active }
                 openSettings = { this.openSettings.bind(this) }
+                height = { this.state.height }
               />
               <div className = 'date'>
                 <Datepicker
@@ -293,6 +318,7 @@ class App extends Component {
                   selectable = { constants.datepicker.selectable }
                   months = { storage[this.state.settings.language].months }
                   changeDate = { this.changeDate.bind(this) }
+                  height = { this.state.height }
                 />
               </div>
               <div className = 'items-boxes'>
@@ -303,6 +329,7 @@ class App extends Component {
                   createItem = { this.createItem.bind(this) }
                   deleteItem = { this.deleteItem.bind(this) }
                   changeItemValue = { this.changeItemValue.bind(this) }
+                  height = { this.state.height }
                 />
                 <ItemsBox
                   description = { constants.budget.expences }
@@ -311,6 +338,7 @@ class App extends Component {
                   createItem = { this.createItem.bind(this) }
                   deleteItem = { this.deleteItem.bind(this) }
                   changeItemValue = { this.changeItemValue.bind(this) }
+                  height = { this.state.height }
                 />
               </div>
             </div>
@@ -329,6 +357,7 @@ class App extends Component {
                 signIn : storage[this.state.settings.language].signIn.login,
                 app : storage[this.state.settings.language].app
               } }
+              height = { this.state.height }
             />
             <SignIn 
               openSettings = { this.openSettings.bind(this) }
@@ -342,6 +371,7 @@ class App extends Component {
                 app : storage[this.state.settings.language].app
               } }
               theme = { this.state.settings.theme }
+              height = { this.state.height }
             />
           </div>
         </div>

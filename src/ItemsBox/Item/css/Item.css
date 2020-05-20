@@ -1,9 +1,9 @@
 .item-wrapper {
-    width: 200px;
+    width: 96.4%;
     height: 30px;
     display: flex;
 	position: relative;
-	margin: 5px 5px 0px 5px;
+	margin: 2.39% 2.8% 0 1.73%;
 	box-shadow: 0px 0px 3px black;
 	transition: box-shadow 0.3s linear, border-radius 0.3s linear;
 	animation: creating 0.5s linear;
@@ -49,8 +49,8 @@
 }
 
 .item-edit button {
-	width: 18px;
-	height: 18px;
+	width: 39.63%;
+    height: 60%;
 	border: none;
 	outline: none;
 	background-color: transparent;
@@ -58,9 +58,9 @@
 	cursor: pointer;
 }
 
-.item-edit button:last-type {
-	height: 20px;
-	width: 20px;
+.item-edit button:last-of-type {
+	width: 44.03%;
+    height: 66.7%;
 }
 
 .item-edit button img {
@@ -72,7 +72,7 @@
 	transition: opacity 0.2s linear, height 0.2s linear 0.2s, margin 0.2s linear 0.2s;
 	margin: 0;
 	opacity: 0;
-	height: 0;
+	height: 0 !important;
 }
 
 @keyframes creating {

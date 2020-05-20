@@ -159,6 +159,7 @@ class SignIn extends Component {
                                 value = { this.state.user.username }
                                 maxLength = { 8 }
                                 onChange = { e => this.inputUsername(e) }
+                                style = { { fontSize : this.props.height * 0.04 } }
                             />
                             <img src = { usernameImage } alt = 'username' />
                         </label>
@@ -169,12 +170,14 @@ class SignIn extends Component {
                                 value = { this.state.user.password }
                                 maxLength = { 8 }
                                 onChange = { e => this.inputPassword(e) }
+                                style = { { fontSize : this.props.height * 0.04 } }
                             />
                             <img src = { passwordImage } alt = 'password' />
                         </label>
                         <button
                             className = { `${this.state.active.button.rotate ? 'rotate-button' : ''} sign-in-button-${this.props.theme }`}
                             onClick = { e => this.checkForm() }
+                            style = { { fontSize : this.props.height * 0.04 } }
                         >
                             <span>{ this.state.active.page === 'login' ? this.props.storage.signIn.login : this.props.storage.signIn.registration }</span>
                         </button>

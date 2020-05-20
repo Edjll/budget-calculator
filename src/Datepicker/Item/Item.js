@@ -8,7 +8,10 @@ const Item = props => {
             className = 'datepicker-item'
             onClick = { e => props.changeDate(e.target.innerText) }
         >
-            <span className = { props.selected ? 'selected' : '' }>
+            <span 
+                className = { props.selected ? 'selected' : '' }
+                style = { { fontSize : props.height * 0.03 } }
+            >
                 { props.selectable === 0 ? props.description.slice(0, 3) : props.description }
             </span>
         </button>

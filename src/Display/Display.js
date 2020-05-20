@@ -12,15 +12,15 @@ class Display extends Component {
         return (
             <div className = { `display` }>
                 <div className = 'display-all-money'>
-                    <span>
+                    <span style = { { fontSize : this.props.height * 0.03 } }>
                         { this.props.money.title }
                     </span>
-                    <span>
+                    <span style = { { fontSize : this.props.height * 0.03 } }>
                         { this.transformMoney(this.props.money.value.all) }
                     </span>
                 </div>
                 <div className = 'display-month-money'>
-                    <span>
+                    <span style = { { fontSize : this.props.height * 0.05 } }>
                         { this.transformMoney(this.props.money.value.month) }
                     </span>
                 </div>

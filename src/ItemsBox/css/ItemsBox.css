@@ -1,6 +1,13 @@
+.items-box {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .items {
-    height: 300px;
     overflow-y: overlay;
+    width: 83%;
 }
 
 p {
@@ -9,12 +16,12 @@ p {
 }
 
 .items::-webkit-scrollbar {
-    width: 3px;
+    width: 2px;
     background-color: transparent; 
 }
 
 .items::-webkit-scrollbar-thumb {
-    background: #111;
+    background: rgb(82, 153, 94);
 }
 
 .items-box:nth-of-type(odd) .item-creator-wrapper {

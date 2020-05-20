@@ -50,7 +50,10 @@ class Item extends Component {
 
     render() {
         return (
-            <div className = { `item-wrapper${this.state.editing ? ' item-editing' : '' }${ this.state.deleting ? ' item-deleting' : '' }` }>
+            <div 
+                className = { `item-wrapper${this.state.editing ? ' item-editing' : '' }${ this.state.deleting ? ' item-deleting' : '' }` }
+                style = { { height : `${ this.props.height * 0.05715 }px` } }
+            >
                 <div className = 'item-value'>
                     <input 
                         type = 'text'
@@ -59,6 +62,7 @@ class Item extends Component {
                         onKeyPress = { e => e.key === 'Enter' ? this.editValue() : null }
                         readOnly = { !this.state.editing }
                         autoFocus = { this.state.editing }
+                        style = { { fontSize : `${ this.props.height * 0.034 }px` } }
                     />
                 </div>
                 <div className = 'item-edit'>

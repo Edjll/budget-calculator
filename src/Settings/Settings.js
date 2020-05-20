@@ -47,23 +47,37 @@ class Settings extends Component {
                 />
                 <form className = 'settings-form' onSubmit = { e => e.preventDefault() }>
                     <label>
-                        <span className = { `settings-span-${ this.props.theme }` }>
-                            { this.props.storage.settings.theme }
-                        </span>
+                        <div className = { `form-description-wrapper form-description-wrapper-${ this.props.theme }` }>
+                            <span style = { { fontSize : this.props.height * 0.034 } }>
+                                { this.props.storage.settings.theme }
+                            </span>
+                            <div 
+                                className = 'triangle' 
+                                style = { { borderWidth : this.props.height * 0.038 } }
+                            ></div>
+                        </div>
                         <select 
                             value = { this.props.theme }
                             onChange = { e => this.props.changeTheme(e.target.value) }
+                            style = { { fontSize : this.props.height * 0.034 } }
                         > 
                             { themes }
                         </select>
                     </label>
                     <label>
-                        <span className = { `settings-span-${this.props.theme}` }>
-                            { this.props.storage.settings.language }
-                        </span>
+                    <div className = { `form-description-wrapper form-description-wrapper-${ this.props.theme }` }>
+                            <span style = { { fontSize : this.props.height * 0.034 } }>
+                                { this.props.storage.settings.language }
+                            </span>
+                            <div 
+                                className = 'triangle' 
+                                style = { { borderWidth : this.props.height * 0.038 } }
+                            ></div>
+                        </div>
                         <select 
                             value = {this.props.language }
                             onChange = { e => this.props.changeLanguage(e.target.value) }
+                            style = { { fontSize : this.props.height * 0.034 } }
                         > 
                             { languages }
                         </select>

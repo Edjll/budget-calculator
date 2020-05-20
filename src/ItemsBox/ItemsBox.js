@@ -62,22 +62,26 @@ class ItemsBox extends Component {
           changeItemValue = { this.changeItemValue }
           deleteItem = { this.deleteItem }
           transformValue = { this.transformValue }
+          height = { this.props.height }
         />
       );
     });
 
     return (
       <div className = 'items-box'>
-        <p>{ this.props.title }</p>
-          <ItemCreator
-              validateValue = { this.validateValue }
-              createItem = { this.createItem }
-              transformValue = { this.transformValue }
-              checkValue = { this.checkValue }
-          />
-          <div className = 'items'>
-              { items }
-          </div>
+        <p style = { { fontSize : `${ this.props.height * 0.04 }px` } }>
+          { this.props.title }
+        </p>
+        <ItemCreator
+            validateValue = { this.validateValue }
+            createItem = { this.createItem }
+            transformValue = { this.transformValue }
+            checkValue = { this.checkValue }
+            height = { this.props.height }
+        />
+        <div className = 'items'>
+            { items }
+        </div>
       </div>
     )
   }

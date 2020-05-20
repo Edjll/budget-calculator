@@ -20,8 +20,8 @@ export const constants = {
     },
     pages : {
         app : '',
-        signIn : ' sign-in-active',
-        settings : ' settings-active'
+        signIn : 'signInActive',
+        settings : 'settingsActive'
     }
 };
 

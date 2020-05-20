@@ -33,13 +33,17 @@ class ItemCreator extends Component {
 
     render() {
         return (
-            <div className = 'item-creator-wrapper'>
+            <div 
+                className = 'item-creator-wrapper'
+                style = { { height : `${ this.props.height * 0.05715 }px` } }
+            >
                 <div className = 'item-creator-value'>
                     <input
                         type = 'text'
                         value = { this.state.value }
                         onChange = { e => this.inputValue(e) }
                         onKeyPress = { e => e.key === 'Enter' ? this.createItem(e) : null }
+                        style = { { fontSize : `${ this.props.height * 0.034 }px` } }
                     />
                 </div>
                 <div className = 'item-creator-save'>

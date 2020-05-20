@@ -27,6 +27,7 @@ class Calendar extends Component {
                             : false
                         : item === this.props.date.year}
                     changeDate = {this.props.changeDate}
+                    height = { this.props.height }
                 />
             )
         });
@@ -38,27 +39,28 @@ class Calendar extends Component {
             >
                 <div className = 'datepicker-switcher'>
                     <button
-                        onClick = {
-                            (e) => this.props.changeSelectableValue(false)
-                        }
+                        onClick = { e => this.props.changeSelectableValue(false) }
                     >
-                        <span>‹</span>
+                        <span 
+                            style = { { fontSize : this.props.height * 0.03 } }
+                        >‹</span>
                     </button>
                     <button
                         onClick = {e => this.props.changeSelectableType(false)}
+                        style = { { fontSize : this.props.height * 0.03 } }
                     >
                         {this.props.selectable.type === 0 ? this.props.selectable.value : `${items[0]}-${items[items.length - 1]}`}
                     </button>
                     <button
-                        onClick = {
-                            (e) => this.props.changeSelectableValue(true)
-                        }
+                        onClick = { e => this.props.changeSelectableValue(true) }
                     >
-                        <span>›</span>
+                        <span
+                            style = { { fontSize : this.props.height * 0.03 } }
+                        >›</span>
                     </button>
                 </div>
                 <div className = 'datepicker-months'>
-                    {componentItems}
+                    { componentItems }
                 </div>
             </div>
         )

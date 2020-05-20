@@ -18,8 +18,8 @@
     position: absolute;
     border: none;
     background-color: transparent;
-    width: 30px;
-    height: 30px;
+    width: 6%;
+    height: 6%;
     cursor: pointer;
     outline: none;
     padding: 0;
@@ -35,12 +35,14 @@
 .settings-form {
     display: flex;
     flex-direction: column;
+    width: 44%;
+    height: 18.1%;
 }
 
 .settings-form label {
-    width: 230px;
+    width: 100%;
     background-color: white;
-    height: 40px;
+    height: 42.1%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,41 +50,44 @@
     box-shadow: 0px 0px 3px black;
 }
 
-.settings-form label span {
+.form-description-wrapper {
     position: relative;
     display: flex;
     align-items: center;
-    width: 80px;
+    width: 40%;
     padding-left: 10px;
     height: 100%;
     background-color: #f3c6c6;
-    font: 400 1.1em Arial;
     transition: background-color 0.5s linear;
+    box-sizing: border-box;
 }
 
-.settings-form label span:after {
-    content: '';
+.settings-form label span {
+    font: 400 1.1em Arial;
+}
+
+.triangle {
     display: block;
     position: absolute;
     top: 0;
-    right: -40px;
-    border: 20px solid transparent;
+    right: -43%;
+    border: 0 solid transparent;
     transition: border 0.5s linear;
 }
 
-.settings-form label:nth-of-type(even) span:after {
-    border-left: 20px solid #f3c6c6;
-    border-bottom: 20px solid #f3c6c6;
+.settings-form label:nth-of-type(even) .triangle {
+    border-left: 0 solid #f3c6c6;
+    border-bottom: 0 solid #f3c6c6;
 }
 
-.settings-form label:nth-of-type(odd) span:after {
-    border-left: 20px solid #f3c6c6;
-    border-top: 20px solid #f3c6c6;
+.settings-form label:nth-of-type(odd) .triangle {
+    border-left: 0 solid #f3c6c6;
+    border-top: 0 solid #f3c6c6;
 }
 
 .settings-form label select {
     height: 100%;
-    width: 105px;
+    width: 45%;
     border: none;
     font-size: 1em;
     outline: none;
@@ -91,7 +96,7 @@
 }
 
 .settings-form label:not(:last-of-type) {
-    margin-bottom: 15px;
+    margin-bottom: 6.5%;
 }
 
 .settings-dark {
@@ -99,16 +104,16 @@
     box-shadow: 0px 0px 5px 0px white;
 }
 
-.settings-span-dark {
+.form-description-wrapper-dark {
     background-color: #ca8d8d !important;
 }
 
-.settings-form label:nth-of-type(even) .settings-span-dark:after {
+.settings-form label:nth-of-type(even) .form-description-wrapper-dark .triangle {
     border-left: 20px solid #ca8d8d;
     border-bottom: 20px solid #ca8d8d;
 }
 
-.settings-form label:nth-of-type(odd) .settings-span-dark:after {
+.settings-form label:nth-of-type(odd) .form-description-wrapper-dark .triangle {
     border-left: 20px solid #ca8d8d;
     border-top: 20px solid #ca8d8d;
 }

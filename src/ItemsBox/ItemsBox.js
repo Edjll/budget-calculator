@@ -62,7 +62,7 @@ class ItemsBox extends Component {
           changeItemValue = { this.changeItemValue }
           deleteItem = { this.deleteItem }
           transformValue = { this.transformValue }
-          height = { this.props.height }
+          size = { this.props.size }
           boxShadows = { this.props.boxShadows }
         />
       );
@@ -70,7 +70,7 @@ class ItemsBox extends Component {
 
     return (
       <div className = 'items-box'>
-        <p style = { { fontSize : `${ this.props.height * 0.04 }px` } }>
+        <p style = { { fontSize : `${ this.props.size * 0.04 }px` } }>
           { this.props.title }
         </p>
         <ItemCreator
@@ -78,7 +78,7 @@ class ItemsBox extends Component {
             createItem = { this.createItem }
             transformValue = { this.transformValue }
             checkValue = { this.checkValue }
-            height = { this.props.height }
+            size = { this.props.size }
             boxShadows = { this.props.boxShadows }
         />
         <div className = 'items'>

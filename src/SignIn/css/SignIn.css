@@ -60,20 +60,23 @@
     cursor: pointer;
     outline: none;
     transition: transform 0.5s linear;
+    display: flex;
+    justify-content: center;
+    padding: 0;
 }
 
 .error-message {
-    min-width: 200px;
+    min-width: 100%;
     width: max-content;
-    padding: 0 10px;
+    padding: 0 4.765%;
     box-sizing: border-box;
-    height: 40px;
+    height: 25.37%;
     background-color: #ff6f6f;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: -55px;
+    top: -35%;
     animation: error-create 0.5s linear;
 }
 
@@ -108,14 +111,15 @@
 }
 
 .open-app {
-    top: 10px;
-    left: 10px;
+    top: 2%;
+    left: 2%;
 }
 
 .open-registration {
-    bottom: 10px;
-    left: 10px;
+    bottom: 2%;
+    left: 2%;
     transition: transform 0.5s linear;
+    display: flex;
 }
 
 .open-app img, .open-registration img {

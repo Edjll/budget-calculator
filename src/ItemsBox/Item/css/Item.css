@@ -1,6 +1,5 @@
 .item-wrapper {
     width: 96.4%;
-    height: 30px;
     display: flex;
 	position: relative;
 	margin: 2.39% 2.8% 0 1.73%;
@@ -10,12 +9,13 @@
 }
 
 .item-wrapper:last-of-type {
-	margin-bottom: 5px;
+	margin-bottom: 2.39%;
 }
 
 .item-value {
 	width: 77.5%;
 	height: 100%;
+	display: flex;
 }
 
 .item-value input {
@@ -24,7 +24,7 @@
 	outline: none;
 	height: 100%;
 	width: 100%;
-	padding: 5px 5px 3px 10px;
+	padding: 3.2% 3.2% 1.92% 6.39%;
 	box-sizing: border-box;
 	background-color: transparent;
 }
@@ -49,6 +49,7 @@
 	background-color: transparent;
 	padding: 0;
 	cursor: pointer;
+	display: flex;
 }
 
 .item-edit button:last-of-type {

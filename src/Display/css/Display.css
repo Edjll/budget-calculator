@@ -20,6 +20,10 @@
     align-items: center;
 }
 
+.display-month-money {
+    display: flex;
+}
+
 .display-month-money span {
     font: 400 1.5em Arial;
 }

@@ -53,8 +53,8 @@ class Item extends Component {
             <div 
                 className = { `item-wrapper${ this.state.deleting ? ' item-deleting' : '' }` }
                 style = { { 
-                    height : `${ this.props.height * 0.05715 }px`,
-                    boxShadow : `0 0 ${this.props.height * 0.006}px ${this.props.boxShadows.light}${this.state.editing ? `, inset 0px 0px ${this.props.height * 0.02}px -${this.props.height * 0.01}px ${this.props.boxShadows.light}` : ''}`
+                    height : `${ this.props.size * 0.05715 }px`,
+                    boxShadow : `0 0 ${this.props.size * 0.006}px ${this.props.boxShadows.light}${this.state.editing ? `, inset 0px 0px ${this.props.size * 0.02}px -${this.props.size * 0.01}px ${this.props.boxShadows.light}` : ''}`
                 } }
             >
                 <div className = 'item-value'>
@@ -65,7 +65,7 @@ class Item extends Component {
                         onKeyPress = { e => e.key === 'Enter' ? this.editValue() : null }
                         readOnly = { !this.state.editing }
                         autoFocus = { this.state.editing }
-                        style = { { fontSize : `${ this.props.height * 0.034 }px` } }
+                        style = { { fontSize : `${ this.props.size * 0.034 }px` } }
                     />
                 </div>
                 <div className = 'item-edit'>

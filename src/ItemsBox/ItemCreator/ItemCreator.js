@@ -47,8 +47,8 @@ class ItemCreator extends Component {
                 onFocus = { e => this.changeFocus() }
                 onBlur = { e => this.changeFocus() }
                 style = { { 
-                    height : `${ this.props.height * 0.05715 }px`,
-                    boxShadow : `0 0 ${this.props.height * 0.006}px ${this.props.boxShadows.light}${this.state.focus ? `, inset 0px 0px ${this.props.height * 0.02}px -${this.props.height * 0.01}px ${this.props.boxShadows.light}` : ''}`
+                    height : `${ this.props.size * 0.05715 }px`,
+                    boxShadow : `0 0 ${this.props.size * 0.006}px ${this.props.boxShadows.light}${this.state.focus ? `, inset 0px 0px ${this.props.size * 0.02}px -${this.props.size * 0.01}px ${this.props.boxShadows.light}` : ''}`
                 } }
             >
                 <div className = 'item-creator-value'>
@@ -57,7 +57,7 @@ class ItemCreator extends Component {
                         value = { this.state.value }
                         onChange = { e => this.inputValue(e) }
                         onKeyPress = { e => e.key === 'Enter' ? this.createItem(e) : null }
-                        style = { { fontSize : `${ this.props.height * 0.034 }px` } }
+                        style = { { fontSize : `${ this.props.size * 0.034 }px` } }
                     />
                 </div>
                 <div className = 'item-creator-save'>

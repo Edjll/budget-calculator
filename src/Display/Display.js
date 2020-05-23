@@ -12,15 +12,15 @@ class Display extends Component {
         return (
             <div className = { `display` }>
                 <div className = 'display-all-money'>
-                    <span style = { { fontSize : this.props.height * 0.03 } }>
+                    <span style = { { fontSize : this.props.size * 0.03 } }>
                         { this.props.money.title }
                     </span>
-                    <span style = { { fontSize : this.props.height * 0.03 } }>
+                    <span style = { { fontSize : this.props.size * 0.03 } }>
                         { this.transformMoney(this.props.money.value.all) }
                     </span>
                 </div>
                 <div className = 'display-month-money'>
-                    <span style = { { fontSize : this.props.height * 0.05 } }>
+                    <span style = { { fontSize : this.props.size * 0.05 } }>
                         { this.transformMoney(this.props.money.value.month) }
                     </span>
                 </div>
@@ -28,6 +28,7 @@ class Display extends Component {
                     <SettingsButton 
                         settingsActive = { this.props.settingsActive }
                         openSettings = { this.props.openSettings }
+                        title = { this.props.storage.settings }
                     />
                 </div>
             </div>

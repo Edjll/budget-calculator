@@ -148,38 +148,40 @@ class SignIn extends Component {
                             ?   <div 
                                     className = { `error-message${ this.state.error.removing ? ' error-removing' : '' }` }
                                 >
-                                    <span>{ this.state.error.message }</span>
+                                    <span
+                                        style = { { fontSize : this.props.size * 0.035 } }
+                                    >{ this.state.error.message }</span>
                                 </div> 
                             : null 
                         }
-                        <label style = { { boxShadow : `0 0 ${this.props.height * 0.01}px ${this.props.boxShadows.light}` } }>
+                        <label style = { { boxShadow : `0 0 ${this.props.size * 0.01}px ${this.props.boxShadows.light}` } }>
                             <input
                                 placeholder = { this.props.storage.signIn.username }
                                 type = 'text'
                                 value = { this.state.user.username }
                                 maxLength = { 8 }
                                 onChange = { e => this.inputUsername(e) }
-                                style = { { fontSize : this.props.height * 0.04 } }
+                                style = { { fontSize : this.props.size * 0.04 } }
                             />
                             <img src = { usernameImage } alt = 'username' />
                         </label>
-                        <label style = { { boxShadow : `0 0 ${this.props.height * 0.01}px ${this.props.boxShadows.light}` } }>
+                        <label style = { { boxShadow : `0 0 ${this.props.size * 0.01}px ${this.props.boxShadows.light}` } }>
                             <input 
                                 placeholder = { this.props.storage.signIn.password }
                                 type = 'password'
                                 value = { this.state.user.password }
                                 maxLength = { 8 }
                                 onChange = { e => this.inputPassword(e) }
-                                style = { { fontSize : this.props.height * 0.04 } }
+                                style = { { fontSize : this.props.size * 0.04 } }
                             />
                             <img src = { passwordImage } alt = 'password' />
                         </label>
                         <button
                             className = { `${this.state.active.button.rotate ? 'rotate-button' : ''} sign-in-button-${this.props.theme }`}
                             onClick = { e => this.checkForm() }
-                            style = { { boxShadow : `0 0 ${this.props.height * 0.01}px ${this.props.boxShadows.light}` } }
+                            style = { { boxShadow : `0 0 ${this.props.size * 0.01}px ${this.props.boxShadows.light}` } }
                         >
-                            <span style = { { fontSize : this.props.height * 0.04 } }>
+                            <span style = { { fontSize : this.props.size * 0.04 } }>
                                 { this.state.active.page === 'login' ? this.props.storage.signIn.login : this.props.storage.signIn.registration }
                             </span>
                         </button>

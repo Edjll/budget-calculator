@@ -46,38 +46,38 @@ class Settings extends Component {
                     title = { this.props.storage.app }
                 />
                 <form className = 'settings-form' onSubmit = { e => e.preventDefault() }>
-                    <label style = { { boxShadow : `0 0 ${this.props.height * 0.01}px ${this.props.boxShadows.light}` } }>
+                    <label style = { { boxShadow : `0 0 ${this.props.size * 0.01}px ${this.props.boxShadows.light}` } }>
                         <div className = { `form-description-wrapper form-description-wrapper-${ this.props.theme }` }>
-                            <span style = { { fontSize : this.props.height * 0.034 } }>
+                            <span style = { { fontSize : this.props.size * 0.034 } }>
                                 { this.props.storage.settings.theme }
                             </span>
                             <div 
                                 className = 'triangle' 
-                                style = { { borderWidth : this.props.height * 0.038 } }
+                                style = { { borderWidth : this.props.size * 0.038 } }
                             ></div>
                         </div>
                         <select 
                             value = { this.props.theme }
                             onChange = { e => this.props.changeTheme(e.target.value) }
-                            style = { { fontSize : this.props.height * 0.034 } }
+                            style = { { fontSize : this.props.size * 0.034 } }
                         > 
                             { themes }
                         </select>
                     </label>
-                    <label style = { { boxShadow : `0 0 ${this.props.height * 0.01}px ${this.props.boxShadows.light}` } }>
+                    <label style = { { boxShadow : `0 0 ${this.props.size * 0.01}px ${this.props.boxShadows.light}` } }>
                     <div className = { `form-description-wrapper form-description-wrapper-${ this.props.theme }` }>
-                            <span style = { { fontSize : this.props.height * 0.034 } }>
+                            <span style = { { fontSize : this.props.size * 0.034 } }>
                                 { this.props.storage.settings.language }
                             </span>
                             <div 
                                 className = 'triangle' 
-                                style = { { borderWidth : this.props.height * 0.038 } }
+                                style = { { borderWidth : this.props.size * 0.038 } }
                             ></div>
                         </div>
                         <select 
                             value = {this.props.language }
                             onChange = { e => this.props.changeLanguage(e.target.value) }
-                            style = { { fontSize : this.props.height * 0.034 } }
+                            style = { { fontSize : this.props.size * 0.034 } }
                         > 
                             { languages }
                         </select>

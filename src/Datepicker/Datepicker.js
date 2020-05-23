@@ -53,7 +53,7 @@ class Datepicker extends Component {
                 <Display 
                     selected = { this.props.date }
                     calendarVisible = { this.calendarVisible }
-                    height = { this.props.height }
+                    size = { this.props.size }
                     boxShadows = { this.props.boxShadows }
                 />
                 <Calendar
@@ -63,7 +63,7 @@ class Datepicker extends Component {
                     changeDate = { this.changeDate.bind(this) }
                     changeSelectableType = { this.changeSelectableType.bind(this) }
                     changeSelectableValue = { this.changeSelectableValue.bind(this) }
-                    height = { this.props.height }
+                    size = { this.props.size }
                     boxShadows = { this.props.boxShadows }
                 />
             </div>

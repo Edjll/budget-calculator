@@ -9,6 +9,7 @@
     padding: 0;
     top: 2%;
     left: 2%;
+    display: flex;
 }
 
 .calculator-button img {

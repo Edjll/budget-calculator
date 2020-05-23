@@ -49,7 +49,7 @@ class App extends Component {
         theme : user.settings.theme,
         language : user.settings.language
       },
-      height : 500
+      size : 500
     }
   }
 
@@ -273,14 +273,26 @@ class App extends Component {
     });
   }
 
-  componentDidMount() {
+  windowResize() {
+    const height = window.innerHeight * 0.8;
+    const width = window.innerWidth * 0.8;
     const state = this.state;
-    state.height = document.getElementById('budget-calculator').clientHeight;
 
-    this.styles.settingsActive = { transform : `rotateY(-90deg) translateZ(${ state.height }px)` };
-    this.styles.signInActive = { transform : `rotateY(-90deg) rotateZ(90deg) translate3d(${ state.height / 2 }px, ${ state.height / 2 }px, ${ state.height }px)` };
+    console.log(state, width, height);
+    
+
+    if (height > width) state.size = width;
+    else if (width > height) state.size = height;
+
+    this.styles.settingsActive = { transform : `rotateY(-90deg) translateZ(${ state.size }px)` };
+    this.styles.signInActive = { transform : `rotateY(-90deg) rotateZ(90deg) translate3d(${ state.size / 2 }px, ${ state.size / 2 }px, ${ state.size }px)` };
 
     this.setState(state);
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.windowResize.bind(this));
+    this.windowResize();
   }
 
   render () {
@@ -289,14 +301,15 @@ class App extends Component {
         <div 
           id = 'budget-calculator' 
           style = { { 
-            width : this.state.height, 
-            perspective : this.state.height * 2 
+            width : this.state.size,
+            height : this.state.size,
+            perspective : this.state.size * 2 
           } } 
         >
           <div className = 'container-3d' style = { this.styles[this.state.settings.active] }>
             <div 
               className = { `container${ ` budget-calculator-${ this.state.settings.theme }` }` }
-              style = { { boxShadow : `0 0 ${this.state.height * 0.01}px ${this.styles.boxShadows[this.state.settings.theme]}` } }
+              style = { { boxShadow : `0 0 ${this.state.size * 0.01}px ${this.styles.boxShadows[this.state.settings.theme]}` } }
             >
               <Display
                 money = { {
@@ -305,7 +318,8 @@ class App extends Component {
                  }}
                 settingsActive = { this.state.settings.active }
                 openSettings = { this.openSettings.bind(this) }
-                height = { this.state.height }
+                size = { this.state.size }
+                storage = { { settings : storage[this.state.settings.language].settings.title } }
               />
               <div className = 'date'>
                 <Datepicker
@@ -316,7 +330,7 @@ class App extends Component {
                   selectable = { constants.datepicker.selectable }
                   months = { storage[this.state.settings.language].months }
                   changeDate = { this.changeDate.bind(this) }
-                  height = { this.state.height }
+                  size = { this.state.size }
                   boxShadows = { this.styles.boxShadows }
                 />
               </div>
@@ -328,7 +342,7 @@ class App extends Component {
                   createItem = { this.createItem.bind(this) }
                   deleteItem = { this.deleteItem.bind(this) }
                   changeItemValue = { this.changeItemValue.bind(this) }
-                  height = { this.state.height }
+                  size = { this.state.size }
                   boxShadows = { this.styles.boxShadows }
                 />
                 <ItemsBox
@@ -338,7 +352,7 @@ class App extends Component {
                   createItem = { this.createItem.bind(this) }
                   deleteItem = { this.deleteItem.bind(this) }
                   changeItemValue = { this.changeItemValue.bind(this) }
-                  height = { this.state.height }
+                  size = { this.state.size }
                   boxShadows = { this.styles.boxShadows }
                 />
               </div>
@@ -358,7 +372,7 @@ class App extends Component {
                 signIn : storage[this.state.settings.language].signIn.login,
                 app : storage[this.state.settings.language].app
               } }
-              height = { this.state.height }
+              size = { this.state.size }
               boxShadows = { this.styles.boxShadows }
             />
             <SignIn 
@@ -373,7 +387,7 @@ class App extends Component {
                 app : storage[this.state.settings.language].app
               } }
               theme = { this.state.settings.theme }
-              height = { this.state.height }
+              size = { this.state.size }
               boxShadows = { this.styles.boxShadows }
             />
           </div>

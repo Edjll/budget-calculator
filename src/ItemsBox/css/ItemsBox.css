@@ -8,15 +8,16 @@
 .items {
     overflow-y: overlay;
     width: 83%;
+    overflow-x: hidden;
 }
 
 p {
     font: 400 1.3em Arial;
-    margin: 10px 0;
+    margin: 5% 0;
 }
 
 .items::-webkit-scrollbar {
-    width: 2px;
+    width: 1%;
     background-color: transparent; 
 }
 

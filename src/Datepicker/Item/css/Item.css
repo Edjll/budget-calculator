@@ -6,6 +6,8 @@
     transition: background-color 0.2s linear;
     outline: none;
     font: 400 0.9em Arial;
+    display: flex;
+    justify-content: center;
 }
 
 .datepicker-item:hover {

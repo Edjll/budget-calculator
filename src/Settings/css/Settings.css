@@ -22,8 +22,9 @@
     cursor: pointer;
     outline: none;
     padding: 0;
-    top: 10px;
-    right: 10px;
+    top: 2%;
+    right: 2%;
+    display: flex;
 }
 
 .open-sign-in img {
@@ -53,7 +54,7 @@
     display: flex;
     align-items: center;
     width: 40%;
-    padding-left: 10px;
+    padding-left: 4.33%;
     height: 100%;
     background-color: #f3c6c6;
     transition: background-color 0.5s linear;
@@ -70,7 +71,7 @@
     top: 0;
     right: -43%;
     border: 0 solid transparent;
-    transition: border 0.5s linear;
+    transition: border-color 0.5s linear;
 }
 
 .settings-form label:nth-of-type(even) .triangle {
@@ -91,6 +92,11 @@
     outline: none;
     cursor: pointer;
     font: 400 1.1em Arial;
+    appearance: none;
+    background-image: url('../images/down-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: right 7% top 50%;
+    background-size: 20%;
 }
 
 .settings-form label:not(:last-of-type) {
@@ -106,11 +112,11 @@
 }
 
 .settings-form label:nth-of-type(even) .form-description-wrapper-dark .triangle {
-    border-left: 20px solid #ca8d8d;
-    border-bottom: 20px solid #ca8d8d;
+    border-left: 0 solid #ca8d8d;
+    border-bottom: 0 solid #ca8d8d;
 }
 
 .settings-form label:nth-of-type(odd) .form-description-wrapper-dark .triangle {
-    border-left: 20px solid #ca8d8d;
-    border-top: 20px solid #ca8d8d;
+    border-left: 0 solid #ca8d8d;
+    border-top: 0 solid #ca8d8d;
 }

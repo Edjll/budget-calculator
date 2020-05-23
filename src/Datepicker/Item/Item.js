@@ -10,7 +10,7 @@ const Item = props => {
         >
             <span 
                 className = { props.selected ? 'selected' : '' }
-                style = { { fontSize : props.height * 0.03 } }
+                style = { { fontSize : props.size * 0.03 } }
             >
                 { props.selectable === 0 ? props.description.slice(0, 3) : props.description }
             </span>

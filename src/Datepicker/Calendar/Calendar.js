@@ -27,7 +27,7 @@ class Calendar extends Component {
                             : false
                         : item === this.props.date.year}
                     changeDate = {this.props.changeDate}
-                    height = { this.props.height }
+                    size = { this.props.size }
                 />
             )
         });
@@ -36,19 +36,22 @@ class Calendar extends Component {
             <div 
                 className = 'datepicker-calendar' 
                 tabIndex = '0'
-                style = { { boxShadow : `0 0 ${this.props.height * 0.01}px ${this.props.boxShadows.light}` } }
+                style = { { 
+                    boxShadow : `0 0 ${this.props.size * 0.01}px ${this.props.boxShadows.light}`,
+                    borderWidth : `${this.props.size * 0.003}px`
+                } }
             >
                 <div className = 'datepicker-switcher'>
                     <button
                         onClick = { e => this.props.changeSelectableValue(false) }
                     >
                         <span 
-                            style = { { fontSize : this.props.height * 0.03 } }
+                            style = { { fontSize : this.props.size * 0.03 } }
                         >‹</span>
                     </button>
                     <button
                         onClick = {e => this.props.changeSelectableType(false)}
-                        style = { { fontSize : this.props.height * 0.03 } }
+                        style = { { fontSize : this.props.size * 0.03 } }
                     >
                         {this.props.selectable.type === 0 ? this.props.selectable.value : `${items[0]}-${items[items.length - 1]}`}
                     </button>
@@ -56,7 +59,7 @@ class Calendar extends Component {
                         onClick = { e => this.props.changeSelectableValue(true) }
                     >
                         <span
-                            style = { { fontSize : this.props.height * 0.03 } }
+                            style = { { fontSize : this.props.size * 0.03 } }
                         >›</span>
                     </button>
                 </div>

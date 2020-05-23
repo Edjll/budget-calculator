@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/budget-calculator/static/css/main.ce63c521.chunk.css",
+    "main.css": "/budget-calculator/static/css/main.ad9f59de.chunk.css",
     "main.js": "/budget-calculator/static/js/main.28f38842.chunk.js",
     "main.js.map": "/budget-calculator/static/js/main.28f38842.chunk.js.map",
     "runtime-main.js": "/budget-calculator/static/js/runtime-main.c986d838.js",
@@ -8,9 +8,9 @@
     "static/js/2.85dceec5.chunk.js": "/budget-calculator/static/js/2.85dceec5.chunk.js",
     "static/js/2.85dceec5.chunk.js.map": "/budget-calculator/static/js/2.85dceec5.chunk.js.map",
     "index.html": "/budget-calculator/index.html",
-    "precache-manifest.d2947d6ed93cb962a335373abb71ec63.js": "/budget-calculator/precache-manifest.d2947d6ed93cb962a335373abb71ec63.js",
+    "precache-manifest.58f35bf285b6f7bba00f7c6df6e463fb.js": "/budget-calculator/precache-manifest.58f35bf285b6f7bba00f7c6df6e463fb.js",
     "service-worker.js": "/budget-calculator/service-worker.js",
-    "static/css/main.ce63c521.chunk.css.map": "/budget-calculator/static/css/main.ce63c521.chunk.css.map",
+    "static/css/main.ad9f59de.chunk.css.map": "/budget-calculator/static/css/main.ad9f59de.chunk.css.map",
     "static/js/2.85dceec5.chunk.js.LICENSE.txt": "/budget-calculator/static/js/2.85dceec5.chunk.js.LICENSE.txt",
     "static/media/calculator.svg": "/budget-calculator/static/media/calculator.d0eb6fd9.svg",
     "static/media/delete.svg": "/budget-calculator/static/media/delete.45844116.svg",
@@ -27,7 +27,7 @@
   "entrypoints": [
     "static/js/runtime-main.c986d838.js",
     "static/js/2.85dceec5.chunk.js",
-    "static/css/main.ce63c521.chunk.css",
+    "static/css/main.ad9f59de.chunk.css",
     "static/js/main.28f38842.chunk.js"
   ]
 }

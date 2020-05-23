@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3f190204c46c76817964d5cd4d86a0b2",
+    "revision": "0d9d8618f59ab52158aa1c88345572fe",
     "url": "/budget-calculator/index.html"
   },
   {
-    "revision": "1f1f8c792d0941524a70",
-    "url": "/budget-calculator/static/css/main.e0cb2307.chunk.css"
+    "revision": "1c9fa9d14e8d5a4929a2",
+    "url": "/budget-calculator/static/css/main.ce63c521.chunk.css"
   },
   {
     "revision": "30af9b8888893e6d584a",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/budget-calculator/static/js/2.85dceec5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1f1f8c792d0941524a70",
-    "url": "/budget-calculator/static/js/main.e32b438b.chunk.js"
+    "revision": "1c9fa9d14e8d5a4929a2",
+    "url": "/budget-calculator/static/js/main.28f38842.chunk.js"
   },
   {
     "revision": "3bc2d86cb6a369c382b5",
@@ -30,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "458441162e64368eafcef890e81f3eb0",
     "url": "/budget-calculator/static/media/delete.45844116.svg"
+  },
+  {
+    "revision": "90f1a2fd6db67e8ee675e8d60d5a3e26",
+    "url": "/budget-calculator/static/media/down-arrow.90f1a2fd.svg"
   },
   {
     "revision": "b26a118cc9afded150f2f8200c84364f",

@@ -7,7 +7,7 @@ import {constants, storage, app} from '../config/config';
 import Settings from '../Settings/Settings';
 import SignIn from '../SignIn/SignIn';
 
-class App extends Component {
+class BudgetCalculator extends Component {
   constructor() {
     super();
 
@@ -308,7 +308,7 @@ class App extends Component {
         >
           <div className = 'container-3d' style = { this.styles[this.state.settings.active] }>
             <div 
-              className = { `container${ ` budget-calculator-${ this.state.settings.theme }` }` }
+              className = { `container${ ` budget-calculator-${ this.state.settings.theme }` } ${ this.state.settings.active == constants.pages.app ? 'active' : '' }` }
               style = { { boxShadow : `0 0 ${this.state.size * 0.01}px ${this.styles.boxShadows[this.state.settings.theme]}` } }
             >
               <Display
@@ -374,6 +374,7 @@ class App extends Component {
               } }
               size = { this.state.size }
               boxShadows = { this.styles.boxShadows }
+              active = { this.state.settings.active == constants.pages.settings }
             />
             <SignIn 
               openSettings = { this.openSettings.bind(this) }
@@ -389,6 +390,7 @@ class App extends Component {
               theme = { this.state.settings.theme }
               size = { this.state.size }
               boxShadows = { this.styles.boxShadows }
+              active = { this.state.settings.active == constants.pages.signIn }
             />
           </div>
         </div>
@@ -396,4 +398,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default BudgetCalculator;

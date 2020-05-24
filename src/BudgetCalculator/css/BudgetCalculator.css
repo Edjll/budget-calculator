@@ -24,7 +24,6 @@
   flex-direction: column;
   padding: 1.907%;
   box-sizing: border-box;
-  background-color: #dfecdc;
 }
 
 .date {
@@ -39,6 +38,14 @@
   height: 80%;
 }
 
+.budget-calculator-light {
+  background-color: #dfecdc !important;
+}
+
 .budget-calculator-dark {
   background-color: #aec5a9 !important;
+}
+
+.active {
+  z-index: 1;
 }

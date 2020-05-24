@@ -114,7 +114,7 @@ class SignIn extends Component {
 
     render() {
         return (
-            <div className = { `sign-in-wrapper sign-in-${ this.props.theme }` }>
+            <div className = { `sign-in-wrapper sign-in-${ this.props.theme } ${ this.props.active ? 'active' : '' }` }>
                 <div className = 'rotate-container'>
                     <CalculatorButton 
                         openApp = { this.props.openApp }

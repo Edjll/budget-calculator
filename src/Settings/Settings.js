@@ -33,7 +33,7 @@ class Settings extends Component {
         }
 
         return (
-            <div className = { `settings-wrapper settings-${ this.props.theme }` }>
+            <div className = { `settings-wrapper settings-${ this.props.theme } ${this.props.active ? 'active' : ''}` }>
                 <button 
                     className = 'open-sign-in'
                     onClick = { this.props.openLogin }

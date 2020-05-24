@@ -24,6 +24,7 @@
   flex-direction: column;
   padding: 1.907%;
   box-sizing: border-box;
+  position: absolute;
 }
 
 .date {

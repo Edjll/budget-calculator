@@ -315,7 +315,7 @@ class BudgetCalculator extends Component {
         >
           <div className = 'container-3d' style = { this.styles[this.state.settings.active] }>
             <div 
-              className = { `main${ ` main-${ this.state.settings.theme }` } ${ this.state.settings.active === constants.pages.app ? 'active' : '' }` }
+              className = { `main${ ` main-${ this.state.settings.theme }` }` }
               style = { { boxShadow : `inset 0 0 ${this.state.size.value * 0.027}px -${this.state.size.value * 0.005}px ${this.styles.boxShadows[this.state.settings.theme]}` } }
             >
               <Display
@@ -381,7 +381,6 @@ class BudgetCalculator extends Component {
               } }
               size = { this.state.size.value }
               boxShadows = { this.styles.boxShadows }
-              active = { this.state.settings.active === constants.pages.settings }
             />
             <SignIn 
               openSettings = { this.openSettings.bind(this) }
@@ -397,7 +396,6 @@ class BudgetCalculator extends Component {
               theme = { this.state.settings.theme }
               size = { this.state.size.value }
               boxShadows = { this.styles.boxShadows }
-              active = { this.state.settings.active === constants.pages.signIn }
             />
           </div>
         </div>

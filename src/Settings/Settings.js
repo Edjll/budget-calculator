@@ -33,7 +33,7 @@ const Settings = props => {
 
     return (
         <div 
-            className = { `settings settings-${ props.theme } ${props.active ? 'active' : ''}` }
+            className = { `settings settings-${ props.theme }` }
             style = { { boxShadow : `inset 0 0 ${props.size * 0.027}px -${props.size * 0.005}px ${props.boxShadows[props.theme]}` } }
         >
             <button 

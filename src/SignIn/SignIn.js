@@ -115,7 +115,7 @@ class SignIn extends Component {
     render() {
         return (
             <div 
-                className = { `sign-in sign-in-${ this.props.theme } ${ this.props.active ? 'active' : '' }` }
+                className = { `sign-in sign-in-${ this.props.theme }` }
                 style = { { boxShadow : `inset 0 0 ${this.props.size * 0.027}px -${this.props.size * 0.005}px ${this.props.boxShadows[this.props.theme]}` } }
             >
                 <div className = 'container-rotate'>

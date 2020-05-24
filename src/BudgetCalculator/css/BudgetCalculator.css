@@ -25,6 +25,7 @@
   padding: 1.907%;
   box-sizing: border-box;
   position: absolute;
+  z-index: 1;
 }
 
 .date {
@@ -45,8 +46,4 @@
 
 .main-dark {
   background-color: #aec5a9 !important;
-}
-
-.active {
-  z-index: 1;
 }

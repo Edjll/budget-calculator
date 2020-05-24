@@ -6,7 +6,9 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BudgetCalculator />
+    <BudgetCalculator 
+      size = { document.getElementById('root') }
+    />
   </React.StrictMode>,
   document.getElementById('root')
 );

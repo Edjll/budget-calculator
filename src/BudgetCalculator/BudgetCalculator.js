@@ -8,8 +8,8 @@ import Settings from '../Settings/Settings';
 import SignIn from '../SignIn/SignIn';
 
 class BudgetCalculator extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     let localStorageApp = JSON.parse(localStorage.getItem(constants.key));
 
@@ -49,7 +49,10 @@ class BudgetCalculator extends Component {
         theme : user.settings.theme,
         language : user.settings.language
       },
-      size : 500
+      size : {
+        value : 0,
+        object : this.props.size
+      }
     }
   }
 
@@ -273,19 +276,23 @@ class BudgetCalculator extends Component {
     });
   }
 
+  objectSize() {
+    if (typeof this.state.size.object === 'number') return this.state.size.object;
+    else if (typeof this.state.size.object === 'object') {
+      const height = this.state.size.object.clientHeight * 0.8;
+      const width = this.state.size.object.clientWidth * 0.8;
+      if (height > width) return width;
+      else if (width > height) return height;
+    }
+  }
+
   windowResize() {
-    const height = window.innerHeight * 0.8;
-    const width = window.innerWidth * 0.8;
-    const state = this.state;
+    const state = this.state;;
 
-    console.log(state, width, height);
-    
+    state.size.value = this.objectSize();
 
-    if (height > width) state.size = width;
-    else if (width > height) state.size = height;
-
-    this.styles.settingsActive = { transform : `rotateY(-90deg) translateZ(${ state.size }px)` };
-    this.styles.signInActive = { transform : `rotateY(-90deg) rotateZ(90deg) translate3d(${ state.size / 2 }px, ${ state.size / 2 }px, ${ state.size }px)` };
+    this.styles.settingsActive = { transform : `rotateY(-90deg) translateZ(${ state.size.value }px)` };
+    this.styles.signInActive = { transform : `rotateY(-90deg) rotateZ(90deg) translate3d(${ state.size.value / 2 }px, ${ state.size.value / 2 }px, ${ state.size.value }px)` };
 
     this.setState(state);
   }
@@ -301,15 +308,15 @@ class BudgetCalculator extends Component {
         <div 
           id = 'budget-calculator' 
           style = { { 
-            width : this.state.size,
-            height : this.state.size,
-            perspective : this.state.size * 2 
+            width : this.state.size.value,
+            height : this.state.size.value,
+            perspective : this.state.size.value * 2 
           } } 
         >
           <div className = 'container-3d' style = { this.styles[this.state.settings.active] }>
             <div 
               className = { `main${ ` main-${ this.state.settings.theme }` } ${ this.state.settings.active === constants.pages.app ? 'active' : '' }` }
-              style = { { boxShadow : `inset 0 0 ${this.state.size * 0.027}px -${this.state.size * 0.005}px ${this.styles.boxShadows[this.state.settings.theme]}` } }
+              style = { { boxShadow : `inset 0 0 ${this.state.size.value * 0.027}px -${this.state.size.value * 0.005}px ${this.styles.boxShadows[this.state.settings.theme]}` } }
             >
               <Display
                 money = { {
@@ -318,7 +325,7 @@ class BudgetCalculator extends Component {
                  }}
                 settingsActive = { this.state.settings.active }
                 openSettings = { this.openSettings.bind(this) }
-                size = { this.state.size }
+                size = { this.state.size.value }
                 storage = { { settings : storage[this.state.settings.language].settings.title } }
               />
               <div className = 'date'>
@@ -330,7 +337,7 @@ class BudgetCalculator extends Component {
                   selectable = { constants.datepicker.selectable }
                   months = { storage[this.state.settings.language].months }
                   changeDate = { this.changeDate.bind(this) }
-                  size = { this.state.size }
+                  size = { this.state.size.value }
                   boxShadows = { this.styles.boxShadows }
                 />
               </div>
@@ -342,7 +349,7 @@ class BudgetCalculator extends Component {
                   createItem = { this.createItem.bind(this) }
                   deleteItem = { this.deleteItem.bind(this) }
                   changeItemValue = { this.changeItemValue.bind(this) }
-                  size = { this.state.size }
+                  size = { this.state.size.value }
                   boxShadows = { this.styles.boxShadows }
                 />
                 <ItemsBox
@@ -352,7 +359,7 @@ class BudgetCalculator extends Component {
                   createItem = { this.createItem.bind(this) }
                   deleteItem = { this.deleteItem.bind(this) }
                   changeItemValue = { this.changeItemValue.bind(this) }
-                  size = { this.state.size }
+                  size = { this.state.size.value }
                   boxShadows = { this.styles.boxShadows }
                 />
               </div>
@@ -372,7 +379,7 @@ class BudgetCalculator extends Component {
                 signIn : storage[this.state.settings.language].signIn.login,
                 app : storage[this.state.settings.language].app
               } }
-              size = { this.state.size }
+              size = { this.state.size.value }
               boxShadows = { this.styles.boxShadows }
               active = { this.state.settings.active === constants.pages.settings }
             />
@@ -388,7 +395,7 @@ class BudgetCalculator extends Component {
                 app : storage[this.state.settings.language].app
               } }
               theme = { this.state.settings.theme }
-              size = { this.state.size }
+              size = { this.state.size.value }
               boxShadows = { this.styles.boxShadows }
               active = { this.state.settings.active === constants.pages.signIn }
             />

@@ -114,21 +114,22 @@ class SignIn extends Component {
 
     render() {
         return (
-            <div className = { `sign-in-wrapper sign-in-${ this.props.theme } ${ this.props.active ? 'active' : '' }` }>
-                <div className = 'rotate-container'>
+            <div 
+                className = { `sign-in sign-in-${ this.props.theme } ${ this.props.active ? 'active' : '' }` }
+                style = { { boxShadow : `inset 0 0 ${this.props.size * 0.027}px -${this.props.size * 0.005}px ${this.props.boxShadows[this.props.theme]}` } }
+            >
+                <div className = 'container-rotate'>
                     <CalculatorButton 
                         openApp = { this.props.openApp }
                         title = { this.props.storage.app }
                     />
-                    <div className = 'settings-button-wrapper'>
-                        <SettingsButton 
-                            settingsActive = { this.props.settingsActive }
-                            openSettings = { this.props.openSettings }
-                            title = { this.props.storage.settings }
-                        />
-                    </div>
+                    <SettingsButton 
+                        settingsActive = { this.props.settingsActive }
+                        openSettings = { this.props.openSettings }
+                        title = { this.props.storage.settings }
+                    />
                     <button 
-                        className = { `open-registration${ this.state.active.button.rotate ? ' rotate-button' : '' }` } 
+                        className = { `open-registration ${ this.state.active.button.rotate ? 'rotate-button' : '' }` } 
                         title = { this.state.active.page === 'login' ? this.props.storage.signIn.registration : this.props.storage.signIn.login }
                         onClick = {
                             e => {

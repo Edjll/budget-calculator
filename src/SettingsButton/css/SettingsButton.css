@@ -1,12 +1,15 @@
 .settings-button {
     background-color: transparent;
-    width: 100%;
-    height: 100%;
+    width: 6%;
+    height: 6%;
     border: none;
     outline: none;
     cursor: pointer;
     padding: 0;
     display: flex;
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
 }
 
 .settings-button img {

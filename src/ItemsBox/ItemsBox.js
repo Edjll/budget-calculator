@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ItemCreator from './ItemCreator/ItemCreator';
 import Item from './Item/Item';
 import './css/ItemsBox.css';
 
-class ItemsBox extends Component {
+const ItemsBox = props => {
 
-  changeItemValue = (id, value) => {
-    this.props.changeItemValue(this.props.description, id, value);
+  const changeItemValue = (id, value) => {
+    props.changeItemValue(props.description, id, value);
   }
 
-  deleteItem = id => {
-    this.props.deleteItem(this.props.description, id);
+  const deleteItem = id => {
+    props.deleteItem(props.description, id);
   }
 
-  validateValue = target => {
+  const validateValue = target => {
     let result = target.value;
     const selection = target.selectionStart;
     if (!/\d|\.|(undefined)/.test(result[selection - 1])) {
@@ -36,57 +36,55 @@ class ItemsBox extends Component {
     return result;
   }
 
-  transformValue = value => {
+  const transformValue = value => {
     return value.replace(/\.0*(?!\d+)/g, '').replace(/(?<=\.\d)(?!\d)/g, '0');
   }
 
-  checkValue(value) {
+  const checkValue = value => {
     if (value.length) {
       if (value.length === 1 && value[0] === '0') return false;
       return true;
     } else return false;
   }
 
-  createItem = value => {
-    this.props.createItem(this.props.description, value);
+  const createItem = value => {
+    props.createItem(props.description, value);
   }
 
-  render() {
-    const items = this.props.items.map(item => {
-      return (
-        <Item
-          key = { item.id }
-          id = { item.id }
-          value = { item.value }
-          validateValue = { this.validateValue }
-          changeItemValue = { this.changeItemValue }
-          deleteItem = { this.deleteItem }
-          transformValue = { this.transformValue }
-          size = { this.props.size }
-          boxShadows = { this.props.boxShadows }
-        />
-      );
-    });
-
+  const items = props.items.map(item => {
     return (
-      <div className = 'items-box'>
-        <p style = { { fontSize : `${ this.props.size * 0.04 }px` } }>
-          { this.props.title }
-        </p>
-        <ItemCreator
-            validateValue = { this.validateValue }
-            createItem = { this.createItem }
-            transformValue = { this.transformValue }
-            checkValue = { this.checkValue }
-            size = { this.props.size }
-            boxShadows = { this.props.boxShadows }
-        />
-        <div className = 'items'>
-            { items }
-        </div>
+      <Item
+        key = { item.id }
+        id = { item.id }
+        value = { item.value }
+        validateValue = { validateValue }
+        changeItemValue = { changeItemValue }
+        deleteItem = { deleteItem }
+        transformValue = { transformValue }
+        size = { props.size }
+        boxShadows = { props.boxShadows }
+      />
+    );
+  });
+
+  return (
+    <div className = 'items-box'>
+      <p style = { { fontSize : `${ props.size * 0.04 }px` } }>
+        { props.title }
+      </p>
+      <ItemCreator
+          validateValue = { validateValue }
+          createItem = { createItem }
+          transformValue = { transformValue }
+          checkValue = { checkValue }
+          size = { props.size }
+          boxShadows = { props.boxShadows }
+      />
+      <div className = 'items'>
+          { items }
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default ItemsBox;

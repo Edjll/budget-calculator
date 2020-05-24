@@ -6,7 +6,7 @@ const SettingsButton = props => {
 
     return (
         <button 
-            className = { `settings-button${ props.settingsActive === ' settings-active' ? ' settings-button-active' : '' }` }
+            className = { `settings-button ${ props.settingsActive ? 'settings-button-active' : '' }` }
             onClick = { props.openSettings }
             title = { props.title }
         >

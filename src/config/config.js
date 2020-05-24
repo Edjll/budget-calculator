@@ -58,7 +58,11 @@ export const storage = {
             username : 'Псевдоним',
             password : 'Пароль'
         },
-        app : 'Приложение'
+        app : 'Приложение',
+        errors : {
+            login : 'Неверный псевдоним или пароль',
+            registration : 'Логин уже занят'
+        }
     },
     en : {
         budget : {
@@ -80,7 +84,11 @@ export const storage = {
             username : 'Username',
             password : 'Password'
         },
-        app : 'App'
+        app : 'App',
+        errors : {
+            login : 'Invalid username or password',
+            registration : 'Username is already taken'
+        }
     }
 }
 

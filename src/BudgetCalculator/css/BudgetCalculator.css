@@ -17,7 +17,7 @@
   transition: transform 1s linear;
 }
 
-.container {
+.main {
   width: 100%;
   height: 100%;
   display: flex;
@@ -39,11 +39,11 @@
   height: 80%;
 }
 
-.budget-calculator-light {
+.main-light {
   background-color: #dfecdc !important;
 }
 
-.budget-calculator-dark {
+.main-dark {
   background-color: #aec5a9 !important;
 }
 

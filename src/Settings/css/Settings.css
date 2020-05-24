@@ -1,4 +1,4 @@
-.settings-wrapper {
+.settings {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -97,6 +97,8 @@
     background-position: right 7% top 50%;
     background-size: 20%;
     background-color: white;
+    display: flex;
+    align-items: center;
 }
 
 .settings-form label:not(:last-of-type) {
@@ -111,8 +113,12 @@
     background-color: #c19292;
 }
 
+.form-description-wrapper-light {
+    background-color: #f3c6c6;
+}
+
 .form-description-wrapper-dark {
-    background-color: #ca8d8d !important;
+    background-color: #ca8d8d;
 }
 
 .settings-form label:nth-of-type(even) .form-description-wrapper-dark .triangle {

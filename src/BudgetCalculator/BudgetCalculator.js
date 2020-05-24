@@ -205,7 +205,7 @@ class BudgetCalculator extends Component {
 
     for (const u in localStorageApp.users) {
       if (u === username) {
-        return {status : false, error : 'Логин занят'};
+        return {status : false, error : storage[this.state.settings.language].errors.registration};
       }
     }
 
@@ -239,7 +239,7 @@ class BudgetCalculator extends Component {
       }
     }
 
-    return {status : false, error : 'Неверный логин или пароль'};
+    return {status : false, error : storage[this.state.settings.language].errors.login};
   }
 
   changeUser(user) {
@@ -308,8 +308,8 @@ class BudgetCalculator extends Component {
         >
           <div className = 'container-3d' style = { this.styles[this.state.settings.active] }>
             <div 
-              className = { `container${ ` budget-calculator-${ this.state.settings.theme }` } ${ this.state.settings.active == constants.pages.app ? 'active' : '' }` }
-              style = { { boxShadow : `0 0 ${this.state.size * 0.01}px ${this.styles.boxShadows[this.state.settings.theme]}` } }
+              className = { `main${ ` main-${ this.state.settings.theme }` } ${ this.state.settings.active === constants.pages.app ? 'active' : '' }` }
+              style = { { boxShadow : `inset 0 0 ${this.state.size * 0.027}px -${this.state.size * 0.005}px ${this.styles.boxShadows[this.state.settings.theme]}` } }
             >
               <Display
                 money = { {
@@ -374,13 +374,13 @@ class BudgetCalculator extends Component {
               } }
               size = { this.state.size }
               boxShadows = { this.styles.boxShadows }
-              active = { this.state.settings.active == constants.pages.settings }
+              active = { this.state.settings.active === constants.pages.settings }
             />
             <SignIn 
               openSettings = { this.openSettings.bind(this) }
               openApp = { this.openApp.bind(this) }
               createUser = { this.createUser.bind(this) }
-              settingsActive = { this.state.settings.active }
+              settingsActive = { this.state.settings.active === constants.pages.settings }
               login =  { this.login.bind(this) }
               storage = { {
                 settings : storage[this.state.settings.language].settings.title,
@@ -390,7 +390,7 @@ class BudgetCalculator extends Component {
               theme = { this.state.settings.theme }
               size = { this.state.size }
               boxShadows = { this.styles.boxShadows }
-              active = { this.state.settings.active == constants.pages.signIn }
+              active = { this.state.settings.active === constants.pages.signIn }
             />
           </div>
         </div>

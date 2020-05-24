@@ -28,10 +28,8 @@
     font: 400 1.5em Arial;
 }
 
-.display-settings-button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 6%;
+.display .settings-button {
+    top: 0%;
+    right: 0%;
     height: 60%;
 }

@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/budget-calculator/static/css/main.d71d0135.chunk.css",
-    "main.js": "/budget-calculator/static/js/main.3bbed7e4.chunk.js",
-    "main.js.map": "/budget-calculator/static/js/main.3bbed7e4.chunk.js.map",
+    "main.css": "/budget-calculator/static/css/main.58e68c25.chunk.css",
+    "main.js": "/budget-calculator/static/js/main.9712c61b.chunk.js",
+    "main.js.map": "/budget-calculator/static/js/main.9712c61b.chunk.js.map",
     "runtime-main.js": "/budget-calculator/static/js/runtime-main.c986d838.js",
     "runtime-main.js.map": "/budget-calculator/static/js/runtime-main.c986d838.js.map",
     "static/js/2.85dceec5.chunk.js": "/budget-calculator/static/js/2.85dceec5.chunk.js",
     "static/js/2.85dceec5.chunk.js.map": "/budget-calculator/static/js/2.85dceec5.chunk.js.map",
     "index.html": "/budget-calculator/index.html",
-    "precache-manifest.c88cacbfa5caf8f19e36b6928c649be7.js": "/budget-calculator/precache-manifest.c88cacbfa5caf8f19e36b6928c649be7.js",
+    "precache-manifest.8d35f9cd93dd0331bfc409b50967c335.js": "/budget-calculator/precache-manifest.8d35f9cd93dd0331bfc409b50967c335.js",
     "service-worker.js": "/budget-calculator/service-worker.js",
-    "static/css/main.d71d0135.chunk.css.map": "/budget-calculator/static/css/main.d71d0135.chunk.css.map",
+    "static/css/main.58e68c25.chunk.css.map": "/budget-calculator/static/css/main.58e68c25.chunk.css.map",
     "static/js/2.85dceec5.chunk.js.LICENSE.txt": "/budget-calculator/static/js/2.85dceec5.chunk.js.LICENSE.txt",
     "static/media/calculator.svg": "/budget-calculator/static/media/calculator.d0eb6fd9.svg",
     "static/media/delete.svg": "/budget-calculator/static/media/delete.45844116.svg",
@@ -27,7 +27,7 @@
   "entrypoints": [
     "static/js/runtime-main.c986d838.js",
     "static/js/2.85dceec5.chunk.js",
-    "static/css/main.d71d0135.chunk.css",
-    "static/js/main.3bbed7e4.chunk.js"
+    "static/css/main.58e68c25.chunk.css",
+    "static/js/main.9712c61b.chunk.js"
   ]
 }

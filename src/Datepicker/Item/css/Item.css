@@ -8,6 +8,7 @@
     font: 400 0.9em Arial;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .datepicker-item:hover {
